@@ -156,3 +156,28 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .skip-link:focus {
   left: 0; }
+
+body, h1, h2, h3 {
+  padding: 0;
+  margin: 0; }
+
+ul, li {
+  list-style: none;
+  text-decoration: none; }
+
+header {
+  background-image: url(../assets/palm-leaves.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh; }
+
+fieldset {
+  border: none;
+  padding: 5%; }
+
+.header {
+  background-color: black;
+  display: inline-block; }
+  .header__title {
+    color: white;
+    font-family: 'Shrikhand', cursive; }

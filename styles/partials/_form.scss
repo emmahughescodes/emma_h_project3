@@ -1,0 +1,27 @@
+header {
+    background-image: url(../assets/palm-leaves.jpg);
+    background-size: cover;
+	background-position: center;
+    height: 100vh; 
+}
+
+form {
+
+}
+
+fieldset {
+    border: none;
+    padding: 5%;
+}
+
+.header {
+    background-color: black; 
+    display: inline-block;
+    &__title {
+        color: white;
+        font-family: 'Shrikhand', cursive;
+    }
+}
+
+
+
