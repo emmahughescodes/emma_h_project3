@@ -31,61 +31,54 @@ quizApp.analyzeResults = function (resultsArray) {
             eCount++;
         }
     }
-    console.log(aCount, bCount, cCount, dCount, eCount);
-    // which letter appears the most? Put letter count and the value into an object
-    const letterObject = {
-        A:aCount, 
-        B:bCount, 
-        C:cCount, 
-        D:dCount, 
-        E:eCount
-    }; 
 
-    //check if the user selected one of each letter: 
-    if (aCount === bCount === cCount === dCount === eCount) {
-        //return unique pose answer
-    }
-    // call function to get the letter that occurs the most
+    const letterObject = {
+        A: aCount, B: bCount, C: cCount, D: dCount, E: eCount};
+
+    console.log("checkobject");
+    console.log(Object.keys(letterObject));
+
+    console.log(letterObject);
     
-    const letterCount = quizApp.maxLetter(letterObject);
+    //call function to get the letter that occurs the most (A, B, C, D, E)
+    const maxLetterValue = quizApp.maxLetter(letterObject);
+    console.log(maxLetterValue);
     
-    // console.log("yay lettercount");
-    // console.log(letterCount);
-    // return letterCount;
 };
 
-// quizApp.maxLetter = function (letterObject) {
-//     const keys = Object.keys(letterObject);
-//     console.log(letterObject.A + "what;s this?");
-//     if (letterObject['A'] == letterObject['B'] == letterObject['C'] == letterObject['D'] == letterObject['A'] == 'E') {
-//         console.log("theyre all the same");
-//         return "same";
-//     }
-    
-//     let maxVal = keys[0];
-//     for (let i = 1; i < keys.length; i++) {
-//         compareVal = keys[i];
-//         if (letterObject[compareVal] >= letterObject[maxVal]) {
-//             maxVal = compareVal;
-//         }
-//     }
-//     // if (maxVal === compareVal) {
-//     //     //call randomizer function 
+quizApp.maxLetter = function (letterObject) {
+    const letterArr = Object.values(letterObject);
+    const letterAnswers = [];
+    if (Math.max(...letterArr) == 1 ) {
+        return "you're unique";
+    } else if (Math.max(...letterArr) == 2 ) {
+        for (key in letterObject) {
+            if (letterObject[key] == 2) {
+                letterAnswers.push(key);
+            }  
+        };
+        return quizApp.randomize(letterAnswers);
+        
+    } else if (Math.max(...letterArr) == 3 ) {
+        for (key in letterObject) {
+            if (letterObject[key] == 3) {
+                letterAnswers.push(key);
+            }
+        };
+        return quizApp.randomize(letterAnswers);
+    }
+};
 
-//     // }
-//     // if () {
-
-//     // }
-//     return maxVal;
-// };
+quizApp.randomize = function (letterAnswers) {
+    const total = letterAnswers.length;
+    const randLetter = letterAnswers[Math.floor(Math.random() * Math.floor(total))];
+    return randLetter;
+};
 
 quizApp.getResults = function(){
     $('form').on('submit', function (event) {
     //this is code only to be run when the form is submitted 
     event.preventDefault();
-    //print this out to check what the event is
-    // console.log(event, "hola");
-
     // Capture the values of the radio buttons into an object where the keys are the letter names and the values will be the count throughout the quiz
     const results = [];
     //function to push the user's answers to the array after they click submit
@@ -105,9 +98,8 @@ quizApp.getResults = function(){
 
     //Analyze results
     //the analyzeResults function returns back the majority letter that the user answered
-    const letterMajority = quizApp.analyzeResults(results);
-    //output majority letter
-    //console.log(letterMajority + "letter majority");
+    const poseCategory = quizApp.analyzeResults(results);
+    console.log("i escaped");
 
     });
 };
