@@ -1,9 +1,11 @@
 // answer key
 const poses = {
-    a: [{name: 'downward dog', desc: 'whatever' }, {name: 'upward dog', desc: 'upwhatever'}],
-    b: [{name: 'eagle', desc: 'bird'}, {name: 'pigeon', desc: 'fat bird'}],
-    c: [{name: 'cow', desc: 'moo'}, {name: 'cat', desc: 'meow'}],
-    unique: [{ name: 'unicorn', desc: 'yippy' }, { name: 'cat', desc: 'meow' }]
+    A: [{name: 'downward dog', desc: 'whateverA' }, {name: 'upward dog', desc: 'upwhatever'}],
+    B: [{name: 'eagle', desc: 'bird'}, {name: 'pigeonB', desc: 'fat bird'}],
+    C: [{name: 'cow', desc: 'moo'}, {name: 'Cat', desc: 'meow'}],
+    D: [{ name: 'cow', desc: 'moo' }, { name: 'D', desc: 'meow' }],
+    E: [{ name: 'cow', desc: 'moo' }, { name: 'EAT', desc: 'meow' }],
+    U: [{ name: 'unicorn', desc: 'yippy' }, { name: 'cat', desc: 'meow' }]
 }
 
 const quizApp = {};
@@ -43,21 +45,28 @@ quizApp.analyzeResults = function (resultsArray) {
     //call function to get the letter that occurs the most (A, B, C, D, E)
     const maxLetterValue = quizApp.maxLetter(letterObject);
     console.log(maxLetterValue);
-    
+
+    //const poseCount = quizApp.poseCalculator(maxLetterValue);
+    console.log(poses[maxLetterValue]);
+
 };
+
+// quizApp.poseCalculator = function (letterInput) {
+//     poses 
+// };
 
 quizApp.maxLetter = function (letterObject) {
     const letterArr = Object.values(letterObject);
     const letterAnswers = [];
     if (Math.max(...letterArr) == 1 ) {
-        return "you're unique";
+        return "U";
     } else if (Math.max(...letterArr) == 2 ) {
         for (key in letterObject) {
             if (letterObject[key] == 2) {
                 letterAnswers.push(key);
             }  
         };
-        return quizApp.randomize(letterAnswers);
+        return quizApp.randomizeAns(letterAnswers);
         
     } else if (Math.max(...letterArr) == 3 ) {
         for (key in letterObject) {
@@ -65,11 +74,11 @@ quizApp.maxLetter = function (letterObject) {
                 letterAnswers.push(key);
             }
         };
-        return quizApp.randomize(letterAnswers);
+        return quizApp.randomizeAns(letterAnswers);
     }
 };
 
-quizApp.randomize = function (letterAnswers) {
+quizApp.randomizeAns = function (letterAnswers) {
     const total = letterAnswers.length;
     const randLetter = letterAnswers[Math.floor(Math.random() * Math.floor(total))];
     return randLetter;
@@ -86,11 +95,9 @@ quizApp.getResults = function(){
     // console.log("hellloooooo");
     const resultsObject = $('input:checked');
     console.log(resultsObject);
-    // console.log("byeeeeeeeee");
 
     for (let i = 0; i < resultsObject.length; i++) {
         results.push(resultsObject[i].value);
-        // console.log(resultsObject[i].value);
     };
 
     //print out array of results ie. [A,B,B,C,D]
@@ -100,7 +107,6 @@ quizApp.getResults = function(){
     //the analyzeResults function returns back the majority letter that the user answered
     const poseCategory = quizApp.analyzeResults(results);
     console.log("i escaped");
-
     });
 };
 
@@ -108,7 +114,5 @@ quizApp.getResults = function(){
 
 $(function(){
     quizApp.init();
-
-    
 });
 
