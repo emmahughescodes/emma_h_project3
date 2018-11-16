@@ -1,11 +1,11 @@
 // answer key
 const poses = {
-    A: [{name: 'downward dog', desc: 'whateverA' }, {name: 'upward dog', desc: 'upwhatever'}],
+    A: [{ name: 'downward dog', desc: 'whateverA' }, { name: 'upward dog', desc: 'upwhatever' }, { name: 'sideward dog', desc: 'upwhatever' }, { name: 'lookward dog', desc: 'upwhatever' }, { name: 'leapward dog', desc: 'upwhatever' }, { name: 'backward dog', desc: 'upwhatever' }],
     B: [{name: 'eagle', desc: 'bird'}, {name: 'pigeonB', desc: 'fat bird'}],
     C: [{name: 'cow', desc: 'moo'}, {name: 'Cat', desc: 'meow'}],
     D: [{ name: 'cow', desc: 'moo' }, { name: 'D', desc: 'meow' }],
     E: [{ name: 'cow', desc: 'moo' }, { name: 'EAT', desc: 'meow' }],
-    U: [{ name: 'unicorn', desc: 'yippy' }, { name: 'cat', desc: 'meow' }]
+    U: [{ name: 'unicorn', desc: 'yippy', img: "assets/downdog.jpg" }]
 }
 
 const quizApp = {};
@@ -13,7 +13,7 @@ const quizApp = {};
 quizApp.init = function(){
     quizApp.getResults();
 };
-
+ 
 quizApp.analyzeResults = function (resultsArray) {
     let aCount = 0;
     let bCount = 0;
@@ -44,16 +44,21 @@ quizApp.analyzeResults = function (resultsArray) {
     
     //call function to get the letter that occurs the most (A, B, C, D, E)
     const maxLetterValue = quizApp.maxLetter(letterObject);
-    console.log(maxLetterValue);
+    console.log(maxLetterValue, "maxLetterValue");
 
-    //const poseCount = quizApp.poseCalculator(maxLetterValue);
-    console.log(poses[maxLetterValue]);
+    const poseAnswer = quizApp.poseCalculator(maxLetterValue);
+    console.log(poseAnswer, "pose answer");
 
+    $('.results').append(`<img src=${poseAnswer.img}>`)
+    // console.log(poses[maxLetterValue]);
 };
 
-// quizApp.poseCalculator = function (letterInput) {
-//     poses 
-// };
+    quizApp.poseCalculator = function (letterInput) {
+        const poseArray = poses[letterInput];
+        const randPose = quizApp.randomizeAns(poseArray);
+        //console.log(randPose, "randPose");
+        return randPose; 
+    };
 
 quizApp.maxLetter = function (letterObject) {
     const letterArr = Object.values(letterObject);
@@ -68,9 +73,9 @@ quizApp.maxLetter = function (letterObject) {
         };
         return quizApp.randomizeAns(letterAnswers);
         
-    } else if (Math.max(...letterArr) == 3 ) {
+    } else if (Math.max(...letterArr) >= 3 ) {
         for (key in letterObject) {
-            if (letterObject[key] == 3) {
+            if (letterObject[key] >= 3) {
                 letterAnswers.push(key);
             }
         };
