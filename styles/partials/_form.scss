@@ -1,7 +1,21 @@
+form {
+    background-color: #fff9;
+    border: 3px solid black;
+    border-radius: 20px;
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+fieldset {
+    border: none;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
 .question-1, .question-2, .question-3, .question-4, .question-5,  {
-    border: 2px solid lightcoral;
-    // height: 100vh;
+    // border: 2px solid lightcoral;
 }
 
 input:not(.submit) {
@@ -28,25 +42,22 @@ input[type="submit"]:hover {
     display: none;
 }
 
-form {
-    border: 3px solid black;
-    background-color: #ffffffb3;
-    display: none;
-    margin: 0 auto;
-    margin-top: 60px;
-}
-
-fieldset {
-    border: none;
-}
-
-img {
-    width: 100%;
+//tablet
+@media (max-width: 768px) {
+    form {
+        background-color: #fff9;
+        border: 3px solid black;
+        border-radius: 20px;
+    }
 }
 
 
-.results {
-    border: 1px solid yellow;
-    margin: 0 auto;
-    margin-top: 60px;
+//phone
+@media (max-width: 330px) {
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; 
+    }
 }

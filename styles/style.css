@@ -165,8 +165,19 @@ ul, li {
   list-style: none;
   text-decoration: none; }
 
-.question-1, .question-2, .question-3, .question-4, .question-5 {
-  border: 2px solid lightcoral; }
+form {
+  background-color: #fff9;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: none;
+  margin: 0 auto;
+  margin-top: 50px; }
+
+fieldset {
+  border: none;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 input:not(.submit) {
   opacity: 0;
@@ -187,46 +198,52 @@ input[type="submit"]:hover {
 .next {
   display: none; }
 
-form {
-  border: 3px solid black;
-  background-color: #ffffffb3;
-  display: none;
-  margin: 0 auto;
-  margin-top: 60px; }
+@media (max-width: 768px) {
+  form {
+    background-color: #fff9;
+    border: 3px solid black;
+    border-radius: 20px; } }
 
-fieldset {
-  border: none; }
-
-img {
-  width: 100%; }
-
-.results {
-  border: 1px solid yellow;
-  margin: 0 auto;
-  margin-top: 60px; }
+@media (max-width: 330px) {
+  fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; } }
 
 .wrapper {
   max-width: 1640px;
   width: 80%;
   margin-left: auto;
-  margin-right: auto;
-  border: 1px solid yellow; }
+  margin-right: auto; }
 
 .background {
   background-image: url(../assets/palm-leaves.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  text-align: center; }
+  min-height: 100vh;
+  text-align: center;
+  padding-bottom: 5%; }
+
+img {
+  width: 100%; }
 
 .header {
-  width: 100%;
   background-color: black;
-  display: block; }
+  display: inline-block;
+  margin-top: 50px; }
   .header__title {
     color: white;
-    font-family: 'Shrikhand', cursive;
-    height: 7vh; }
+    font-family: 'Shrikhand', cursive; }
 
 .title {
   color: magenta; }
@@ -244,10 +261,21 @@ img {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  margin-top: 60px;
-  background-color: white;
-  border: 5px solid orange; }
+  margin-top: 50px;
+  background-color: #fff9;
+  border: 3px solid black;
+  border-radius: 20px; }
 
 .welcome-image img {
   width: 50%;
   margin-top: 40px; }
+
+@media (max-width: 480px) {
+  .header {
+    background-color: rebeccapurple;
+    word-wrap: wrap; } }
+
+.results {
+  border: 1px solid yellow;
+  margin: 0 auto;
+  margin-top: 50px; }

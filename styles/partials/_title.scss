@@ -1,11 +1,18 @@
 .header {
-    width: 100%;
+    // width: 100%;
     background-color: black; 
-    display: block;
+    display: inline-block;
+    margin-top: 50px;
     &__title {
         color: white;
         font-family: 'Shrikhand', cursive;
-        height: 7vh;
+        // height: 7vh;
+        // background-color: black;
+    }
+    .title-one, .title-two, .title-three, .title-four, .title-five {
+        // background-color: black;
+        // margin-bottom: 10px;
+       
     }
 }
 
@@ -19,12 +26,31 @@
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    margin-top: 60px;
-    background-color: white;
-    border: 5px solid orange;
+    margin-top: 50px;
+    background-color: #fff9;
+    border: 3px solid black;
+    border-radius: 20px;
 }
 
 .welcome-image img {
     width: 50%;
     margin-top: 40px;
+}
+
+
+//tablet
+@media (max-width: 768px) {
+
+
+}
+
+
+//phones
+@media (max-width: 480px) {
+    .header {
+        // background-color: #f700f7;
+        // background-color: #8b73d5;
+        background-color: rebeccapurple;
+        word-wrap: wrap;
+    }
 }

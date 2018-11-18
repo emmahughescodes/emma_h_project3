@@ -135,7 +135,7 @@ quizApp.getResults = function(){
 
 $(function(){
     $('a').smoothScroll();
-    
+
     $('form').hide();
     $('.results').hide();
         $("#start-btn").on("click", function () {
@@ -144,6 +144,10 @@ $(function(){
             console.log("hello");
             return false;
         });
+
+    
+
+
    
 
     // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
