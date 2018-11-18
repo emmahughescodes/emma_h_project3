@@ -1,13 +1,10 @@
 .header {
-    // width: 100%;
     background-color: black; 
     display: inline-block;
     margin-top: 50px;
     &__title {
         color: white;
         font-family: 'Shrikhand', cursive;
-        // height: 7vh;
-        // background-color: black;
     }
     .title-one, .title-two, .title-three, .title-four, .title-five {
         // background-color: black;
@@ -22,35 +19,82 @@
 
 .start {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     margin: 0 auto;
+    padding: 3%;
     margin-top: 50px;
     background-color: #fff9;
     border: 3px solid black;
     border-radius: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
+.start-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3%;
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 8px;
+        box-shadow: 2px 3px;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 5px;
+        width: 35%;
+    }
+    a:hover {
+        background-color: #f700f7;
+    }
+    h2 {
+        line-height: 35px;
+        font-style: italic;
+    }
+}
+
+
+.welcome-image {
+    margin: 5px;
+    width: 40%;
+}
 .welcome-image img {
-    width: 50%;
-    margin-top: 40px;
+    border-radius: 15px;
+    display: block;
 }
 
 
 //tablet
-@media (max-width: 768px) {
+@media (max-width: 636px) {
+    .start {
+        display: block;
+        padding: 5%;
+    }
+    .start-content {
+        display: block;
+        width: 100%;
+        h2 {
+            padding: 5% 5%
+        } 
+    }
 
-
+    .welcome-image {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
 }
 
 
 //phones
 @media (max-width: 480px) {
     .header {
-        // background-color: #f700f7;
+        background-color: #f700f7;
         // background-color: #8b73d5;
-        background-color: rebeccapurple;
-        word-wrap: wrap;
+        // background-color: rebeccapurple;
     }
 }
