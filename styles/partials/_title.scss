@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    background-color: black; 
+    display: block;
+    &__title {
+        color: white;
+        font-family: 'Shrikhand', cursive;
+        height: 7vh;
+    }
+}
+
+.title {
+    color: magenta;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: white;
+    border: 5px solid orange;
+}
+
+.welcome-image img {
+    width: 50%;
+    margin-top: 40px;
+}

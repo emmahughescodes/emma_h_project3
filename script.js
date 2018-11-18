@@ -112,12 +112,52 @@ quizApp.getResults = function(){
     //the analyzeResults function returns back the majority letter that the user answered
     const poseCategory = quizApp.analyzeResults(results);
     console.log("i escaped");
+    //initially the results section was hidden
+    $('.results').show();
+    //we'll need to hide the form now to display the results
+    $('form').hide();
+    //once the user has clicked submit also display the button to retake the quiz.
+    $(".results").append(`<a class="restart" href="#">Take Quiz Again!</a>`);
+    //reload the webpage
+    $(".restart").on('click', function (event) {
+        //the location object is related to the current URL
+        //reload the current page when the user retakes the quiz.
+        location.reload(); 
+    });
+
+    
+
+
     });
 };
 
 
 
 $(function(){
+    $('a').smoothScroll();
+    
+    $('form').hide();
+    $('.results').hide();
+        $("#start-btn").on("click", function () {
+            $('form').show();
+            $('.start').hide();
+            console.log("hello");
+            return false;
+        });
+   
+
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault();
+
+    //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // });
+
     quizApp.init();
+
+
 });
 

@@ -9,99 +9,174 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <div class="header">
-            <h1 class="header__title">What Yoga Pose Are You?</h1>   
+    <header class="background">
+        <div class="header" id="start-quiz">
+            <h1 class="header__title"><span class="title-one">What</span> <span class="title-two">Yoga</span> <span class="title-three">Pose</span> <span class="title-four">Are</span> <span class="title-five">You?</span></h1>   
+            <a href="#maincontent" class="skip-link">Skip to main content.</a>
         </div>
-    </header>
-    <main>
-        <form class="" action="">
-            <!-- question one: hours of sleep -->
-            <fieldset class="group1" id="sleep">
-                <h3>How many hours of sleep do you need?</h3>
-                <label for="no-sleep">No Sleep</label>
-                <input type="radio" name="sleep" id="no-sleep" value="A" required>
-                <label for="six-hours">6 hours</label>
-                <input type="radio" name="sleep" id="six-hours" value="B" required>
-                <label for="seven-hours">7 hours</label>
-                <input type="radio" name="sleep" id="seven-hours" value="C" required>
-                <label for="eight-hours">8 hours</label>
-                <input type="radio" name="sleep" id="eight-hours" value="D" required>
-                <label for="hibernate">I need to hibernate!</label>
-                <input type="radio" name="sleep" id="hibernate" value="E" required>
-            </fieldset>
+       
+        <div class="start wrapper">
+            <div class="welcome-image wrapper">
+                <img src="assets/spiritual.png" alt="">
+            </div>
+            <h2>Learn more about yourself with the pose that best suits you!</h2>
+            <a id="start-btn" class="start-quiz" href="">Take Quiz!</a>
+        </div>
+        
+    
+        <form action="" class="wrapper">
+            <div class="question-1">
+                <!-- question one: hours of sleep -->
+                <fieldset class="group1" id="sleep">
+                    <h3>How many hours of sleep do you need?</h3>
+                    
+                    <input type="radio" name="sleep" id="no-sleep" value="A" required>
+                    <label for="no-sleep">No Sleep</label>
+                    
+                    <input type="radio" name="sleep" id="six-hours" value="B" required>
+                    <label for="six-hours">6 hours</label>
 
-            <!-- question two: favourite drink -->
-            <fieldset class="group1" id="drink">
-                <h3>What is your favourite drink?</h3>
-                <label for="coffee">Coffee</label>
-                <input type="radio" name="drink" id="coffee" value="A" required>
-                <label for="kombucha">Kombucha</label>
-                <input type="radio" name="drink" id="kombucha" value="B" required>
-                <label for="water">Water</label>
-                <input type="radio" name="drink" id="water" value="C" required>
-                <label for="tea">Tea</label>
-                <input type="radio" name="drink" id="tea" value="D" required>
-                <label for="tequila">Tequila!</label>
-                <input type="radio" name="drink" id="tequila" value="E" required>
-            </fieldset>
+                    
+                    <input type="radio" name="sleep" id="seven-hours" value="C" required>
+                    <label for="seven-hours">7 hours</label>
 
-            <!-- question three: favourite fruit -->
-            <fieldset class="group1" id="fruit">
-                <h3>What is your favourite fruit?</h3>
-                <label for="apple">Honey Crisp Apple</label>
-                <input type="radio" name="fruit" id="apple" value="A" required>
-                <label for="banana">Banana</label>
-                <input type="radio" name="fruit" id="banana" value="B" required>
-                <label for="grapefruit">Grapefruit</label>
-                <input type="radio" name="fruit" id="grapefruit" value="C" required>
-                <label for="dragon-fruit">Dragon Fruit</label>
-                <input type="radio" name="fruit" id="dragon-fruit" value="D" required>
-                <label for="no-fruit">Ew, fruit</label>
-                <input type="radio" name="fruit" id="no-fruit" value="E" required>
-            </fieldset>
+                    
+                    <input type="radio" name="sleep" id="eight-hours" value="D" required>
+                    <label for="eight-hours">8 hours</label>
 
-            <!-- question four -->
-            <fieldset class="group1" id="cry">
-                <h3>How often do you cry?</h3>
-                <label for="never">Never</label>
-                <input type="radio" name="cry" id="never" value="A" required>
-                <label for="once">Once a year</label>
-                <input type="radio" name="cry" id="once" value="B" required>
-                <label for="movies">Only movies make me cry</label>
-                <input type="radio" name="cry" id="movies" value="C" required>
-                <label for="twice">Twice a month</label>
-                <input type="radio" name="cry" id="twice" value="D" required>
-                <label for="everything">Everything makes me cry</label>
-                <input type="radio" name="cry" id="everything" value="E" required>
-            </fieldset>
+                    
+                    <input type="radio" name="sleep" id="hibernate" value="E" required>
+                    <label for="hibernate">I need to hibernate!</label>
 
-            <!-- question five: time spent socializing -->
-            <fieldset class="group1" id="social">
-                <h3>How often do you socialize with people?</h3>
-                <label for="fridays">It's Friday, let's get lit!</label>
-                <input type="radio" name="social" id="fridays" value="A" required>
-                <label for="weekly">Once a week</label>
-                <input type="radio" name="social" id="weekly" value="B" required>
-                <label for="monthly">Once a month</label>
-                <input type="radio" name="social" id="monthly" value="C" required>
-                <label for="birthday">Only on my Birthday</label>
-                <input type="radio" name="social" id="birthday" value="D" required>
-                <label for="ew-people">Ew, people</label>
-                <input type="radio" name="social" id="ew-people" value="E" required>
-            </fieldset>
+                    <a class="next" href="#drink">NEXT</a>
 
-            <input type="submit" value="Submit">
+                </fieldset>
+            </div>
+
+            <div class="question-2">
+                <!-- question two: favourite drink -->
+                <fieldset class="group1" id="drink">
+                    <h3>What is your favourite drink?</h3>
+                    
+                    <input type="radio" name="drink" id="coffee" value="A" required>
+                    <label for="coffee">Coffee</label>
+
+                    
+                    <input type="radio" name="drink" id="kombucha" value="B" required>
+                    <label for="kombucha">Kombucha</label>
+
+                    
+                    <input type="radio" name="drink" id="water" value="C" required>
+                    <label for="water">Water</label>
+
+                    
+                    <input type="radio" name="drink" id="tea" value="D" required>
+                    <label for="tea">Tea</label>
+
+                    
+                    <input type="radio" name="drink" id="tequila" value="E" required>
+                    <label for="tequila">Tequila!</label>
+
+                    <a class="next" href="#fruit">NEXT</a>
+
+                </fieldset>
+            </div>
+            <div class="question-3">
+                <!-- question three: favourite fruit -->
+                <fieldset class="group1" id="fruit">
+                    <h3>What is your favourite fruit?</h3>
+                    
+                    <input type="radio" name="fruit" id="apple" value="A" required>
+                    <label for="apple">Honey Crisp Apple</label>
+
+                    
+                    <input type="radio" name="fruit" id="banana" value="B" required>
+                    <label for="banana">Banana</label>
+
+                    
+                    <input type="radio" name="fruit" id="grapefruit" value="C" required>
+                    <label for="grapefruit">Grapefruit</label>
+
+                    
+                    <input type="radio" name="fruit" id="dragon-fruit" value="D" required>
+                    <label for="dragon-fruit">Dragon Fruit</label>
+
+                    
+                    <input type="radio" name="fruit" id="no-fruit" value="E" required>
+                    <label for="no-fruit">Ew, fruit</label>
+
+                    <a class="next" href="#cry">NEXT</a>
+
+                </fieldset>
+            </div>
+            <div class="question-4">
+                <!-- question four -->
+                <fieldset class="group1" id="cry">
+                    <h3>How often do you cry?</h3>
+                    
+                    <input type="radio" name="cry" id="never" value="A" required>
+                    <label for="never">Never</label>
+
+                    
+                    <input type="radio" name="cry" id="once" value="B" required>
+                    <label for="once">Once a year</label>
+
+                    
+                    <input type="radio" name="cry" id="movies" value="C" required>
+                    <label for="movies">Only movies make me cry</label>
+
+                    
+                    <input type="radio" name="cry" id="twice" value="D" required>
+                    <label for="twice">Twice a month</label>
+
+                    
+                    <input type="radio" name="cry" id="everything" value="E" required>
+                    <label for="everything">Everything makes me cry</label>
+
+                    <a class="next" href="#social">NEXT</a>
+                </fieldset>
+            </div>
+            <div class="question-5">
+                <!-- question five: time spent socializing -->
+                <fieldset class="group1" id="social">
+                    <h3>How often do you socialize with people?</h3>
+                    
+                    <input type="radio" name="social" id="fridays" value="A" required>
+                    <label for="fridays">It's Friday, let's get lit!</label>
+
+                    
+                    <input type="radio" name="social" id="weekly" value="B" required>
+                    <label for="weekly">Once a week</label>
+
+                    
+                    <input type="radio" name="social" id="monthly" value="C" required>
+                    <label for="monthly">Once a month</label>
+
+                    
+                    <input type="radio" name="social" id="birthday" value="D" required>
+                    <label for="birthday">Only on my Birthday</label>
+
+                    
+                    <input type="radio" name="social" id="ew-people" value="E" required>
+                    <label for="ew-people">Ew, people</label>
+                    
+                </fieldset>
+                <input class= "submit" type="submit" value="Submit">
+            </div>
         </form>
 
-        <div class="results">
-            
+        <div class="results wrapper" id="results-section">
+            <h2>whATTUP????!111</h2>
         </div>
-    </main>
+    </header>
+
     <footer>
 
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

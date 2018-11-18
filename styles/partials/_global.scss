@@ -1,0 +1,19 @@
+.wrapper {
+    max-width: 1640px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    //margin-top causing issues with cascading styles
+    border: 1px solid yellow;
+}
+
+
+.background {
+    background-image: url(../assets/palm-leaves.jpg);
+    background-size: cover;
+	background-position: center;
+    height: 100vh; 
+    text-align: center;
+}
+
+
