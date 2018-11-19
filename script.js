@@ -122,7 +122,7 @@ quizApp.getResults = function(){
     //we'll need to hide the form now to display the results
     $('form').hide();
     //once the user has clicked submit also display the button to retake the quiz.
-    $(".results").append(`<a class="restart" href="#"><span class="namaste">N'amaste</span> here and take the quiz again!</a>`);
+    $(".results").append(`<a class="restart" href="#"><span class="namaste">N'amaste</span> here & retake quiz!</a>`);
     //reload the webpage
     $(".restart").on('click', function (event) {
         //the location object is related to the current URL
