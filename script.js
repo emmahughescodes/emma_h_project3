@@ -1,11 +1,25 @@
 // answer key
+// const poses = {
+//     A: [{ name: 'downward dog', desc: 'whateverA' }, { name: 'upward dog', desc: 'upwhatever' }, { name: 'sideward dog', desc: 'upwhatever' }, { name: 'lookward dog', desc: 'upwhatever' }, { name: 'leapward dog', desc: 'upwhatever' }, { name: 'backward dog', desc: 'upwhatever' }],
+//     B: [{name: 'eagle', desc: 'bird'}, {name: 'pigeonB', desc: 'fat bird'}],
+//     C: [{name: 'cow', desc: 'moo'}, {name: 'Cat', desc: 'meow'}],
+//     D: [{ name: 'cow', desc: 'moo' }, { name: 'D', desc: 'meow' }],
+//     E: [{ name: 'cow', desc: 'moo' }, { name: 'D', desc: 'meow' }],
+//     U: [{ name: 'unicorn', desc: 'yippy', img: "assets/downdog.jpg" }]
+// }
+
 const poses = {
-    A: [{ name: 'downward dog', desc: 'whateverA' }, { name: 'upward dog', desc: 'upwhatever' }, { name: 'sideward dog', desc: 'upwhatever' }, { name: 'lookward dog', desc: 'upwhatever' }, { name: 'leapward dog', desc: 'upwhatever' }, { name: 'backward dog', desc: 'upwhatever' }],
-    B: [{name: 'eagle', desc: 'bird'}, {name: 'pigeonB', desc: 'fat bird'}],
-    C: [{name: 'cow', desc: 'moo'}, {name: 'Cat', desc: 'meow'}],
-    D: [{ name: 'cow', desc: 'moo' }, { name: 'D', desc: 'meow' }],
-    E: [{ name: 'cow', desc: 'moo' }, { name: 'EAT', desc: 'meow' }],
-    U: [{ name: 'unicorn', desc: 'yippy', img: "assets/downdog.jpg" }]
+    A: [{ name: 'Tadasana / Mountain Pose', desc: 'Standing poses help you remain rooted in your beliefs and stand proudly', img: 'assets/mountain-pose.png' }, { name: 'Virabhadrasana I / Warrior 1', desc: 'Standing poses help you remain rooted in your beliefs and stand proudly', img: 'assets/warrior-1.png' }],
+
+    B: [{ name: 'Ardha Matsyendrasana / Seated Spinal Twist', desc: 'Poses that require twisting help with supporting your back and cleansing your body', img: 'assets/seated-spinal-twist.png' }, { name: 'Trikonasana / Triangle Pose', desc: 'Poses that require twisting help with supporting your back and detoxifying your body', img: 'assets/trikonasana.png' }],
+
+    C: [{ name: 'Parsva Bhuja Dandasana / Dragon Fly Pose', desc: 'Arm Balances require your strength and humility to take risks!', img: 'assets/dragonfly-pose.png' }, { name: 'Eka Pada Galavasana / Flying Crow Pose', desc: 'Arm Balances require your strength and humility to take risks!', img: 'assets/flying-crow-pose.png' }],
+
+    D: [{ name: 'Ardha Chandrasana / Half Moon Pose', desc: 'Balance poses give you a theatrical sense of play and a feeling of accomplishment', img: 'assets/halfmoon-pose.png' }, { name: 'Utthita Hasta Padangustasana / Extended Hand to Big Toe Pose', desc: 'Balance poses give you a theatrical sense of play and a feeling of accomplishment', img: 'assets/Extended-hand-to-big-toe.png' }],
+
+    E: [{ name: 'Shavasana / Corpse Pose', desc: 'Restorative poses are made for you! Take on new poses when you are feeling ready but for now concentrate on feeling rested', img: 'assets/savasana.png' }, { name: "Balasana / Child's Pose", desc: 'Restorative poses are made for you! Take on new poses when you are feeling ready but for now concentrate on feeling rested', img: 'assets / child - pose.png' }],
+    
+    U: [{ name: 'Camatkarasana / Wild Thing Pose', desc: 'You are a range of personality traits and poses! Try out backbends to explore how you are feeling today!', img: "assets/wild-thing-pose.png" }]
 }
 
 const quizApp = {};

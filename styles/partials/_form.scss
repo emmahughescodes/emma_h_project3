@@ -1,5 +1,5 @@
 form {
-    background-color: #fff9;
+    background-color: $white-shade;
     border: 3px solid black;
     border-radius: 20px;
     display: none;
@@ -14,17 +14,13 @@ fieldset {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.question-1, .question-2, .question-3, .question-4, .question-5,  {
-    // border: 2px solid lightcoral;
-}
-
 input:not(.submit) {
     opacity: 0;
     position: absolute;
 }
 
 label {
-    margin-right: 10px;  
+    margin-right: 15px;  
 }
 
 label:last-child {
@@ -32,15 +28,15 @@ label:last-child {
 }
 
 label:hover {
-    background-color: #f700f7;
-    border: 1px solid black;
+    background-color: $accent-color;
     border-radius: 8px;
     box-shadow: 2px 3px;
-    
+    padding: 2px;
+    // margin-right: 0px;
 }
 
 input[type="radio"]:checked + label {
-    background-color: #f700f7;
+    background-color: $accent-color;
     border: 1px solid black;
     border-radius: 8px;
     box-shadow: 2px 3px;
@@ -64,7 +60,7 @@ input[type="submit"] {
 
 
 input[type="submit"]:hover {
-    background-color: #f700f7;
+    background-color: $accent-color;
 }
 
 .next {
@@ -74,7 +70,7 @@ input[type="submit"]:hover {
 //tablet
 @media (max-width: 768px) {
     form {
-        background-color: #fff9;
+        background-color: $white-shade;
         border: 3px solid black;
         border-radius: 20px;
     }
