@@ -4,7 +4,32 @@
     border-radius: 20px;
     margin: 0 auto;
     margin-top: 50px;
+    padding: 5%;
 }
+
+.results-title {
+    font-family: 'Shrikhand', cursive;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+.results img {
+    border-radius: 8px;
+}
+.pose-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 10px 0;
+}
+
+.pose-desc {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 10px 0;
+}
+
 
 .namaste {
     font-style: italic;
@@ -20,8 +45,11 @@
     border-radius: 8px;
     box-shadow: 2px 3px;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 3%;
+    margin-top: 15px;
     padding: 5px;
     width: 15%;
+}
+
+.restart:hover {
+    background-color: $accent-color;
 }

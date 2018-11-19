@@ -1,25 +1,17 @@
 // answer key
-// const poses = {
-//     A: [{ name: 'downward dog', desc: 'whateverA' }, { name: 'upward dog', desc: 'upwhatever' }, { name: 'sideward dog', desc: 'upwhatever' }, { name: 'lookward dog', desc: 'upwhatever' }, { name: 'leapward dog', desc: 'upwhatever' }, { name: 'backward dog', desc: 'upwhatever' }],
-//     B: [{name: 'eagle', desc: 'bird'}, {name: 'pigeonB', desc: 'fat bird'}],
-//     C: [{name: 'cow', desc: 'moo'}, {name: 'Cat', desc: 'meow'}],
-//     D: [{ name: 'cow', desc: 'moo' }, { name: 'D', desc: 'meow' }],
-//     E: [{ name: 'cow', desc: 'moo' }, { name: 'D', desc: 'meow' }],
-//     U: [{ name: 'unicorn', desc: 'yippy', img: "assets/downdog.jpg" }]
-// }
 
 const poses = {
-    A: [{ name: 'Tadasana / Mountain Pose', desc: 'Standing poses help you remain rooted in your beliefs and stand proudly', img: 'assets/mountain-pose.png' }, { name: 'Virabhadrasana I / Warrior 1', desc: 'Standing poses help you remain rooted in your beliefs and stand proudly', img: 'assets/warrior-1.png' }],
+    A: [{ name: 'Tadasana / Mountain Pose', desc: 'Standing poses help you remain rooted in your beliefs and stand proudly', img: 'assets/mountain-pose.png', text: "Yogi standing"}, { name: 'Virabhadrasana I / Warrior 1', desc: 'Standing poses help you remain rooted in your beliefs and stand proudly', img: 'assets/warrior-1.png', text: "Yogi standing in a lunge with both arms above head" }],
 
-    B: [{ name: 'Ardha Matsyendrasana / Seated Spinal Twist', desc: 'Poses that require twisting help with supporting your back and cleansing your body', img: 'assets/seated-spinal-twist.png' }, { name: 'Trikonasana / Triangle Pose', desc: 'Poses that require twisting help with supporting your back and detoxifying your body', img: 'assets/trikonasana.png' }],
+    B: [{ name: 'Ardha Matsyendrasana / Seated Spinal Twist', desc: 'Poses that require twisting help with supporting your back and cleansing your body', img: 'assets/seated-spinal-twist.png', text: "Yogi seated with one leg extended and the other crossed over and opposite elbow crosses knee"}, { name: 'Trikonasana / Triangle Pose', desc: 'Poses that require twisting help with supporting your back and detoxifying your body', img: 'assets/trikonasana.png', text: "Yogi in a wide legged stance bending over resting one hand on the shin of the front leg"}],
 
-    C: [{ name: 'Parsva Bhuja Dandasana / Dragon Fly Pose', desc: 'Arm Balances require your strength and humility to take risks!', img: 'assets/dragonfly-pose.png' }, { name: 'Eka Pada Galavasana / Flying Crow Pose', desc: 'Arm Balances require your strength and humility to take risks!', img: 'assets/flying-crow-pose.png' }],
+    C: [{ name: 'Parsva Bhuja Dandasana / Dragon Fly Pose', desc: 'Arm balances require your strength and humility to take risks!', img: 'assets/dragonfly-pose.png', text: "Yogi balancing on two hands with one leg kicked out to the side and the other leg bent resting a top the other leg"}, { name: 'Eka Pada Galavasana / Flying Crow Pose', desc: 'Arm balances require the strength and humility you have to take risks!', img: 'assets/flying-crow-pose.png', text: "Yogi balancing on two hands with one leg bent resting on the respective arm and the other leg extended straight up and back"}],
 
-    D: [{ name: 'Ardha Chandrasana / Half Moon Pose', desc: 'Balance poses give you a theatrical sense of play and a feeling of accomplishment', img: 'assets/halfmoon-pose.png' }, { name: 'Utthita Hasta Padangustasana / Extended Hand to Big Toe Pose', desc: 'Balance poses give you a theatrical sense of play and a feeling of accomplishment', img: 'assets/Extended-hand-to-big-toe.png' }],
+    D: [{ name: 'Ardha Chandrasana / Half Moon Pose', desc: 'Balance poses give you a theatrical sense of play and a feeling of accomplishment', img: 'assets/halfmoon-pose.png', text: "Yogi standing on one leg with the respective arm pointing down and the other leg parallel to the ground and the other arm extends straight up to the sky"}, { name: 'Utthita Hasta Padangustasana / Extended Hand to Big Toe Pose', desc: 'Balance poses give you a theatrical sense of play and a feeling of accomplishment', img: 'assets/Extended-hand-to-big-toe.png', text: "Yogi standing on one leg with the other leg extended to the side which the same side hand is grabbing the big toe and the other arm extends to the other side"}],
 
-    E: [{ name: 'Shavasana / Corpse Pose', desc: 'Restorative poses are made for you! Take on new poses when you are feeling ready but for now concentrate on feeling rested', img: 'assets/savasana.png' }, { name: "Balasana / Child's Pose", desc: 'Restorative poses are made for you! Take on new poses when you are feeling ready but for now concentrate on feeling rested', img: 'assets / child - pose.png' }],
+    E: [{ name: 'Shavasana / Corpse Pose', desc: 'Restorative poses are made for you! Take on new poses when you are feeling ready but for now concentrate on feeling rested', img: 'assets/savasana.png', text: "Yogi lying on the ground facing upwards with legs and arms extended"}, { name: "Balasana / Child's Pose", desc: 'Restorative poses are made for you! Take on new poses when you are feeling ready but for now concentrate on feeling rested', img: 'assets / child-pose.png', text: "Yogi facing down sitting on their feet, knees apart, with arms extended in front of them"}],
     
-    U: [{ name: 'Camatkarasana / Wild Thing Pose', desc: 'You are a range of personality traits and poses! Try out backbends to explore how you are feeling today!', img: "assets/wild-thing-pose.png" }]
+    U: [{ name: 'Camatkarasana / Wild Thing Pose', desc: 'You are a range of personality traits and poses! Try out backbends to explore how you are feeling today!', img: "assets/wild-thing-pose.png", text: "Yogi doing a backbend with three limbs"}]
 }
 
 const quizApp = {};
@@ -62,15 +54,14 @@ quizApp.analyzeResults = function (resultsArray) {
 
     const poseAnswer = quizApp.poseCalculator(maxLetterValue);
     console.log(poseAnswer, "pose answer");
-
-    $('.results').append(`<img src=${poseAnswer.img}>`)
-    // console.log(poses[maxLetterValue]);
+    $('.results').append(`<h3 class="pose-name">${poseAnswer.name}</h3>`)
+    $('.results').append(`<img src=${poseAnswer.img} alt=${poseAnswer.text}>`)
+    $('.results').append(`<h3 class="pose-desc">${poseAnswer.desc}</h3>`)
 };
 
     quizApp.poseCalculator = function (letterInput) {
         const poseArray = poses[letterInput];
         const randPose = quizApp.randomizeAns(poseArray);
-        //console.log(randPose, "randPose");
         return randPose; 
     };
 
